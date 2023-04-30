@@ -1,3 +1,28 @@
+# [5.33.0](https://github.com/rsuite/rsuite/compare/v5.32.0...v5.33.0) (2023-04-28)
+
+### Features
+
+- **Tree,TreePicker,CheckTree,CheckTreePicker:** add onSelectItem prop ([#3172](https://github.com/rsuite/rsuite/issues/3172)) ([9a5618a](https://github.com/rsuite/rsuite/commit/9a5618a3affb13e70330a5aea253e8b54c67b61b))
+
+# [5.32.0](https://github.com/rsuite/rsuite/compare/v5.31.1...v5.32.0) (2023-04-21)
+
+### Bug Fixes
+
+- **build:** fix broken lodash currying in CDN bundles ([#3159](https://github.com/rsuite/rsuite/issues/3159)) ([896a9d5](https://github.com/rsuite/rsuite/commit/896a9d53cf2c1e0140e43eea024c4f0361c04328))
+- **Cascader:** avoid mutating data prop ([#3157](https://github.com/rsuite/rsuite/issues/3157)) ([6d13318](https://github.com/rsuite/rsuite/commit/6d133185ea1c65b47b35da61499d5cff77dde122))
+
+### Features
+
+- **DateRangePicker:** add `limitStartYear` prop ([#3163](https://github.com/rsuite/rsuite/issues/3163)) ([fd27df2](https://github.com/rsuite/rsuite/commit/fd27df21e1c36372ea8b444f79521c901a65780c))
+
+## [5.31.1](https://github.com/rsuite/rsuite/compare/v5.31.0...v5.31.1) (2023-04-14)
+
+### Bug Fixes
+
+- **Calendar:** fix style errors that are not as designed ([#3146](https://github.com/rsuite/rsuite/issues/3146)) ([f3fe484](https://github.com/rsuite/rsuite/commit/f3fe484a8f63e877c517061e5911116d3107b68b))
+- **i18n:** update ru_RU locale ([#3153](https://github.com/rsuite/rsuite/issues/3153)) ([5c626a9](https://github.com/rsuite/rsuite/commit/5c626a99ca70d9e30836b02f81b90a37f5f2de2d))
+- **Toggle:** fix spinner size in sm/lg Toggles ([#3156](https://github.com/rsuite/rsuite/issues/3156)) ([896ee49](https://github.com/rsuite/rsuite/commit/896ee492bbdd2277dbe23f6667305ceaf9154a8a))
+
 # [5.31.0](https://github.com/rsuite/rsuite/compare/v5.30.0...v5.31.0) (2023-04-07)
 
 ### Bug Fixes

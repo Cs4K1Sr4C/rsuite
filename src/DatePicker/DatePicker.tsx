@@ -69,8 +69,11 @@ export interface DatePickerProps
   /** ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day */
   isoWeek?: boolean;
 
-  /** Set the lower limit of the available year relative to the current selection date */
+  /** Set the upper limit of the available year relative to the current selection date */
   limitEndYear?: number;
+
+  /** Set the lower limit of the available year relative to the current selection date */
+  limitStartYear?: number;
 
   /** Whether to show week numbers */
   showWeekNumbers?: boolean;
@@ -186,6 +189,7 @@ const DatePicker: RsRefForwardingComponent<'div', DatePickerProps> = React.forwa
       format: formatStr = 'yyyy-MM-dd',
       isoWeek,
       limitEndYear = 1000,
+      limitStartYear,
       locale: overrideLocale,
       menuClassName,
       appearance = 'default',
@@ -536,11 +540,6 @@ const DatePicker: RsRefForwardingComponent<'div', DatePickerProps> = React.forwa
       [props]
     );
 
-    const inSameMonth = useCallback(
-      (date: Date) => DateUtils.isSameMonth(date, calendarDate),
-      [calendarDate]
-    );
-
     const calendar = (
       <CalendarContainer
         {...calendarProps}
@@ -552,9 +551,9 @@ const DatePicker: RsRefForwardingComponent<'div', DatePickerProps> = React.forwa
         disabledMinutes={shouldDisableMinute ?? DEPRECATED_disabledMinutes}
         disabledSeconds={shouldDisableSecond ?? DEPRECATED_disabledSeconds}
         limitEndYear={limitEndYear}
+        limitStartYear={limitStartYear}
         format={formatStr}
         isoWeek={isoWeek}
-        inSameMonth={inSameMonth}
         calendarDate={calendarDate}
         onMoveForward={handleMoveForward}
         onMoveBackward={handleMoveBackward}
@@ -720,6 +719,7 @@ DatePicker.propTypes = {
   hideSeconds: PropTypes.func,
   isoWeek: PropTypes.bool,
   limitEndYear: PropTypes.number,
+  limitStartYear: PropTypes.number,
   onChange: PropTypes.func,
   onChangeCalendarDate: PropTypes.func,
   onNextMonth: PropTypes.func,
